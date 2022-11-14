@@ -11,6 +11,7 @@ namespace Double_Linked_List
         public int noMhs;
         public string name;
         public node next;
+
     }
     class Program
     {
