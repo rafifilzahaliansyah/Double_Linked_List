@@ -223,6 +223,13 @@ namespace Double_Linked_List
                                 }
                                 break;
                             }
+                        case '6':
+                            return;
+                        default:
+                            {
+                                Console.WriteLine("\nInvalid Option");
+                            }
+                            break;
 
                     }
                 }
