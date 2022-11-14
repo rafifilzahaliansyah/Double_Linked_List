@@ -114,6 +114,13 @@ namespace Double_Linked_List
             current.next.prev = previous;
             return true;
         }
+        public bool listempty()
+        {
+            if (START == null)
+                return true;
+            else
+                return false;
+        }
 
     }
     class Program
