@@ -42,6 +42,13 @@ namespace Double_Linked_List
             node NewNode = new node();
             NewNode.noMhs = nim;
             NewNode.name = nm;
+
+            //cheack if the list empty
+            if ((START != null) && (nim == START.noMhs))
+            {
+                Console.WriteLine("\nDuplicate number not allowed");
+                return;
+            }
         }
     }
     class Program
