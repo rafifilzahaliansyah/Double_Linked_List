@@ -136,10 +136,17 @@ namespace Double_Linked_List
         public void descending()
         {
             if (listempty())
-                Console.WriteLine("\nRecord in the descending order of" + "roll number are : \n");
-            node currentnode;
-            for(currentnode = START,currentnode !=null,currentnode=currentnode.next)
+                Console.WriteLine("\nList is empty");
+            else
+                Console.WriteLine("\nRecord in the Descending order of" + "roll number are:\n");
+            node currentNode;
+            for (currentNode = START; currentNode != null; currentNode = currentNode.next)
             { }
+            while (currentNode != null)
+            {
+                Console.Write(currentNode.noMhs + "" + currentNode.name + "\n");
+                currentNode = currentNode.prev;
+            }
         }
 
     }
@@ -147,6 +154,27 @@ namespace Double_Linked_List
     {
         static void Main(string[] args)
         {
+            doublelinkedlist obj = new doublelinkedlist();
+            while (true)
+            { 
+                try
+                {
+                    Console.WriteLine("\nMenu");
+                    Console.WriteLine("1. Add a record to the list");
+                    Console.WriteLine("2. Delete a record from the list");
+                    Console.WriteLine("3. Viiew all records in the ascending order of roll numbers");
+                    Console.WriteLine("4. View all records in the descending order of roll  numbers");
+                    Console.WriteLine("5. Search for a record in the list");
+                    Console.WriteLine("6. Exit\n");
+                    Console.WriteLine("Enter your choice (1-6): ");
+                    char ch = Convert.ToChar(Console.ReadLine());
+                    switch (ch)
+                    {
+                        case '1':
+                            obj.addnode();
+                    }
+                }
+            }
         }
     }
 }
