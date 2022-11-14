@@ -30,6 +30,19 @@ namespace Double_Linked_List
         {
             START = null;
         }
+
+        public void addnode()
+        {
+            int nim;
+            string nm;
+            Console.WriteLine("\n Enter the roll number of the student : ");
+            nim = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\n Enter the name of the student : ");
+            nm = Console.ReadLine();
+            node NewNode = new node();
+            NewNode.noMhs = nim;
+            NewNode.name = nm;
+        }
     }
     class Program
     {
