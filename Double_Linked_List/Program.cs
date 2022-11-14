@@ -82,11 +82,39 @@ namespace Double_Linked_List
             current.prev = NewNode;
             previous.next = NewNode;
         }
-        public bool Search(int rollno,ref node previous, ref node current
+        public bool Search(int rollno,ref node previous, ref node current)
         {
             for(previous = current = START;current != null && rollno != current.noMhs;previous=current,current = current.next) { }
             return (current != null);
         }
+
+        public bool dellnode(int rollno)
+        {
+            node previous, current;
+            previous = current = null;
+            if (Search(rollno, ref previous, ref current) == false)
+                return false;
+            //the beginning of data
+            if(current.next==null)
+            {
+                previous.next = null;
+                return true;
+            }
+            //node between two nodes in the list
+            if(current==START)
+            {
+                START = START.next;
+                if (START != null)
+                    START.prev = null;
+                return true;
+            }
+            /* The is deleted is in between the list the following lines of is executed
+             */
+            previous.next = current.next;
+            current.next.prev = previous;
+            return true;
+        }
+
     }
     class Program
     {
