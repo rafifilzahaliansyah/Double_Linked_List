@@ -49,6 +49,43 @@ namespace Double_Linked_List
                 Console.WriteLine("\nDuplicate number not allowed");
                 return;
             }
+            /*if the node is to inserted at between two node
+             */
+            node previous, current;
+            for (current = previous= START;
+                current != null && nim == current.noMhs;
+                previous = current,current=current.next)
+            {
+                if(nim == current.noMhs)
+                {
+                    Console.WriteLine("\nDuplicate roll numbers not allowed");
+                    return;
+                }
+
+            }
+            /*
+             * on the exucition of the above for loop,prev and
+             * current will point to those nodes
+             * between wich the node is to be inserted
+             */
+
+            NewNode.next = current;
+            NewNode.prev = previous;
+
+            //if the node is to be inserted at the end of the list
+            if(current==null)
+            {
+                NewNode.next = null;
+                NewNode.next = NewNode;
+                return;
+            }
+            current.prev = NewNode;
+            previous.next = NewNode;
+        }
+        public bool Search(int rollno,ref node previous, ref node current
+        {
+            for(previous = current = START;current != null && rollno != current.noMhs;previous=current,current = current.next) { }
+            return (current != null);
         }
     }
     class Program
