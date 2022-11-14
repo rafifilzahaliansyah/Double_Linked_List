@@ -133,7 +133,14 @@ namespace Double_Linked_List
                     Console.Write(currentnode.noMhs + "" + currentnode.name + "\n");
             }
         }
-
+        public void descending()
+        {
+            if (listempty())
+                Console.WriteLine("\nRecord in the descending order of" + "roll number are : \n");
+            node currentnode;
+            for(currentnode = START,currentnode !=null,currentnode=currentnode.next)
+            { }
+        }
 
     }
     class Program
